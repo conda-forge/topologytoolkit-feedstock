@@ -1,0 +1,38 @@
+boost_cpp:
+- 1.70.0
+c_compiler:
+- vs2008
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2008
+graphviz:
+- '2.40'
+pin_run_as_build:
+  boost-cpp:
+    max_pin: x.x.x
+  graphviz:
+    max_pin: x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+  sqlite:
+    max_pin: x
+  vtk:
+    max_pin: x.x.x
+  zlib:
+    max_pin: x.x
+python:
+- '2.7'
+sqlite:
+- '3'
+vtk:
+- 8.2.0
+zip_keys:
+- - python
+  - c_compiler
+  - cxx_compiler
+zlib:
+- '1.2'
