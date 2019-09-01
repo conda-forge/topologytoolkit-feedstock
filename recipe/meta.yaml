@@ -1,5 +1,5 @@
 {% set name = "topologytoolkit" %}
-{% set version = "0.9.8.dev57" %}
+{% set version = "0.9.9.dev57" %}
 
 package:
   name: {{ name|lower }}
