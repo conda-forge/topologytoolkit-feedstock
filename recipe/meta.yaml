@@ -11,7 +11,6 @@ source:
   patches:
     - do_not_link_python_libs.patch  # [osx]
     - win32.patch  # [win]
-    - win32_openmp.patch  # [win]
 
 build:
   number: 1
