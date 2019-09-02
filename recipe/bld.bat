@@ -14,7 +14,12 @@ cmake .. -G "Ninja" ^
     -DTTK_ENABLE_CPU_OPTIMIZATION=OFF ^
     -DTTK_ENABLE_KAMIKAZE=OFF ^
     -DTTK_ENABLE_MPI=OFF ^
-    -DTTK_ENABLE_OPENMP=OFF
+    -DTTK_ENABLE_OPENMP=OFF ^
+    -DGRAPHVIZ_INCLUDE_DIR="%LIBRARY_PREFIX%/include/graphviz" ^
+    -DGRAPHVIZ_CDT_LIBRARY="%LIBRARY_PREFIX%/lib/graphviz/cdt.lib" ^
+    -DGRAPHVIZ_GVC_LIBRARY="%LIBRARY_PREFIX%/lib/graphviz/gvc.lib" ^
+    -DGRAPHVIZ_CGRAPH_LIBRARY="%LIBRARY_PREFIX%/lib/graphviz/cgraph.lib" ^
+    -DGRAPHVIZ_PATHPLAN_LIBRARY="%LIBRARY_PREFIX%/lib/graphviz/Pathplan.lib"
 if errorlevel 1 exit 1
 
 ninja install
