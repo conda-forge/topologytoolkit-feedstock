@@ -28,13 +28,13 @@ requirements:
     - tbb-devel
     - boost-cpp
     - zlib
-    - graphviz
+    - graphviz  # [not win]
     - sqlite
   run:
     - python
     - vtk
     - zlib
-    - graphviz
+    - graphviz  # [not win]
     - sqlite
 
 test:
