@@ -13,7 +13,7 @@ source:
     - win32.patch  # [win]
 
 build:
-  number: 3
+  number: 4
   skip: True  # [win and py27]
 
 requirements:
