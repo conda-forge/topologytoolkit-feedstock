@@ -19,8 +19,9 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - cmake
-    - ninja  # [win]
+    - ninja ==1.8.2  # [win]
   host:
     - python
     - vtk ==9.0.1
