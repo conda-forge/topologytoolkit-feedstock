@@ -25,4 +25,4 @@ cmake .. \
     -DTTK_ENABLE_MPI=OFF \
     -DTTK_ENABLE_OPENMP=ON
 
-cmake --build . --target install -- -j"${CPU_COUNT}"
+cmake --build . --target install
