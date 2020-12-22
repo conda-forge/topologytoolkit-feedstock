@@ -3,7 +3,7 @@ cd build
 
 set BUILD_CONFIG=Release
 
-cmake .. -G "NMake Makefiles" ^
+cmake .. -G "Ninja" ^
     -Wno-dev ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
     -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
@@ -19,5 +19,5 @@ cmake .. -G "NMake Makefiles" ^
     -DTTK_ENABLE_OPENMP=OFF
 if errorlevel 1 exit 1
 
-cmake --build . --target install --config Release
+ninja install
 if errorlevel 1 exit 1
