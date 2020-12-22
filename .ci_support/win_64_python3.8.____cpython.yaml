@@ -27,6 +27,6 @@ sqlite:
 target_platform:
 - win-64
 vtk:
-- 8.2.0
+- 9.0.1
 zlib:
 - '1.2'
