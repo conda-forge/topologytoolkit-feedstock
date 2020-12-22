@@ -21,7 +21,7 @@ requirements:
     - ninja
   host:
     - python
-    - vtk
+    - vtk 9.0.1
     - tbb-devel
     - boost-cpp
     - zlib
@@ -33,7 +33,7 @@ requirements:
     - numpy
   run:
     - python
-    - vtk
+    - vtk 9.0.1
     - zlib
     - graphviz  # [not win]
     - sqlite
