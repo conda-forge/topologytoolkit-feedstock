@@ -20,7 +20,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - cmake
+    - cmake  # [not win]
+    - cmake ==3.14.5  # [win]
     - ninja ==1.8.2  # [win]
   host:
     - python
