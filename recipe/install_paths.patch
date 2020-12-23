@@ -1,0 +1,34 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4abe459e..645ec0bf 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -98,11 +98,11 @@ install(
+   EXPORT
+     TTKBaseTargets
+   RUNTIME DESTINATION
+-    ${CMAKE_INSTALL_BINDIR}/ttk
++    ${CMAKE_INSTALL_BINDIR}
+   ARCHIVE DESTINATION
+-    ${CMAKE_INSTALL_LIBDIR}/ttk
++    ${CMAKE_INSTALL_LIBDIR}
+   LIBRARY DESTINATION
+-    ${CMAKE_INSTALL_LIBDIR}/ttk
++    ${CMAKE_INSTALL_LIBDIR}
+   )
+ 
+ install(
+@@ -146,11 +146,11 @@ if(TTK_BUILD_VTK_WRAPPERS)
+     EXPORT
+       TTKVTKTargets
+     RUNTIME DESTINATION
+-      ${CMAKE_INSTALL_BINDIR}/ttk
++      ${CMAKE_INSTALL_BINDIR}
+     ARCHIVE DESTINATION
+-      ${CMAKE_INSTALL_LIBDIR}/ttk
++      ${CMAKE_INSTALL_LIBDIR}
+     LIBRARY DESTINATION
+-      ${CMAKE_INSTALL_LIBDIR}/ttk
++      ${CMAKE_INSTALL_LIBDIR}
+     )
+ 
+   install(
