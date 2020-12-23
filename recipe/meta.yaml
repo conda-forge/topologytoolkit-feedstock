@@ -9,6 +9,7 @@ source:
   url: https://github.com/topology-tool-kit/ttk/archive/{{ version }}.zip
   sha256: cdd8a2c3236b0cc6d332d4dd52cf0911ff3a2ab41ec4ea9fe3331a696a181963
   patches:
+    - install_paths.patch
     - remove_linker_flags.patch
     - fix_ninja_build.patch  # [win]
     - boost_system.patch  # [win]
