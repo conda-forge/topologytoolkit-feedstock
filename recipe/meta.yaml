@@ -10,7 +10,7 @@ source:
   sha256: cdd8a2c3236b0cc6d332d4dd52cf0911ff3a2ab41ec4ea9fe3331a696a181963
   patches:
     - remove_linker_flags.patch
-    - boost_config.patch  # [win]
+    - fix_ninja_build.patch  # [win]
 
 build:
   number: 0
@@ -34,9 +34,8 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - cmake  # [not win]
-    - cmake ==3.14.5  # [win]
-    - ninja ==1.8.2  # [win]
+    - cmake
+    - ninja  # [win]
   host:
     - python
     - vtk ==9.0.1
