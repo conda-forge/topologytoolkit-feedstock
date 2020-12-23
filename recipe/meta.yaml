@@ -1,5 +1,8 @@
 {% set name = "topologytoolkit" %}
 {% set version = "0.9.9" %}
+{% set build = 0 %}
+
+{% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
 package:
   name: {{ name|lower }}
@@ -16,8 +19,22 @@ source:
     - remove_rpaths.patch  # [linux]
 
 build:
-  number: 0
+  number: {{ build }}
   skip: True  # [win and py27]
+
+  # the package variant can be selected via the build string:
+  # `conda install -c conda-forge "topologytoolkit * no_paraview*"` for vtk-variant
+  # `conda install -c conda-forge "topologytoolkit * with_paraview*"` for paraview-variant (default)
+  {% if TTK_WITH_PARAVIEW == "True" %}
+  {% set paraview_prefix = "with_paraview" %}
+  {% else %}
+  {% set paraview_prefix = "no_paraview" %}
+  {% endif %}
+  string: {{ paraview_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+
+  # this de-prioritizes the non-paraview variant of the package and makes paraview the default
+  track_features:
+    - ttk_without_paraview  # [not TTK_WITH_PARAVIEW]
 
 requirements:
   build:
@@ -43,7 +60,8 @@ requirements:
   host:
     - python
     - openmp  # [win]    
-    - paraview
+    - paraview  # [TTK_WITH_PARAVIEW]
+    - vtk ==9.0.1  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
     - boost-cpp
     - zlib
@@ -56,7 +74,8 @@ requirements:
   run:
     - python
     - openmp  # [win]
-    - paraview
+    - paraview  # [TTK_WITH_PARAVIEW]
+    - vtk ==9.0.1  # [not TTK_WITH_PARAVIEW]
     - zlib
     - graphviz  # [not win]
     - sqlite
@@ -74,6 +93,7 @@ test:
     - readelf -d "${PREFIX}/bin/ttkMorseSmaleComplexCmd"  # [linux]
     - python examples/python/example.py examples/data/inputData.vtu
     - ttkMorseSmaleComplexCmd -i examples/data/inputData.vtu -o ""
+    - pvpython examples/pvpython/example.py examples/data/inputData.vtu  # [TTK_WITH_PARAVIEW]
 
 about:
   home: https://topology-tool-kit.github.io/
