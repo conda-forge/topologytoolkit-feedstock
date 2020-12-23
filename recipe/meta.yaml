@@ -65,6 +65,7 @@ test:
     - examples/python/example.py
   commands:
     - python examples/python/example.py examples/data/inputData.vtu
+    - ttkMorseSmaleComplexCmd -i examples/data/inputData.vtu -o ""
 
 about:
   home: https://topology-tool-kit.github.io/
