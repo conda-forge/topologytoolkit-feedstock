@@ -1,0 +1,13 @@
+diff --git a/config.cmake b/config.cmake
+index a3d5b61d..3fab8612 100644
+--- a/config.cmake
++++ b/config.cmake
+@@ -86,7 +86,7 @@ if(TTK_BUILD_DOCUMENTATION)
+   find_package(Doxygen)
+ endif()
+ 
+-find_package(Boost COMPONENTS system)
++find_package(Boost COMPONENTS system CONFIG)
+ if(NOT Boost_FOUND)
+   find_package(Boost REQUIRED)
+   if(Boost_FOUND)

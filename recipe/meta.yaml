@@ -10,6 +10,7 @@ source:
   sha256: cdd8a2c3236b0cc6d332d4dd52cf0911ff3a2ab41ec4ea9fe3331a696a181963
   patches:
     - remove_linker_flags.patch
+    - boost_config.patch  # [win]
 
 build:
   number: 0
