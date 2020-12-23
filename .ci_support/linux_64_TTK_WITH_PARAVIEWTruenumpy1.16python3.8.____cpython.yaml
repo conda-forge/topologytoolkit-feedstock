@@ -1,3 +1,5 @@
+TTK_WITH_PARAVIEW:
+- 'True'
 boost_cpp:
 - 1.72.0
 c_compiler:
@@ -19,7 +21,7 @@ docker_image:
 graphviz:
 - '2.40'
 numpy:
-- '1.19'
+- '1.16'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -33,7 +35,7 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.9.* *_cpython
+- 3.8.* *_cpython
 sqlite:
 - '3'
 target_platform:
