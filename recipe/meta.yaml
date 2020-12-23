@@ -13,6 +13,7 @@ source:
     - remove_linker_flags.patch
     - fix_ninja_build.patch  # [win]
     - boost_system.patch  # [win]
+    - remove_rpaths.patch  # [linux]
 
 build:
   number: 0
