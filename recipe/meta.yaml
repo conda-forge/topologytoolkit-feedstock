@@ -43,7 +43,7 @@ requirements:
   host:
     - python
     - openmp  # [win]    
-    - vtk ==9.0.1
+    - paraview
     - tbb-devel
     - boost-cpp
     - zlib
@@ -56,7 +56,7 @@ requirements:
   run:
     - python
     - openmp  # [win]
-    - vtk ==9.0.1
+    - paraview
     - zlib
     - graphviz  # [not win]
     - sqlite
