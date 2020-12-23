@@ -19,7 +19,20 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ cdt('libxcb') }}  # [linux]
+    - {{ cdt('libxau') }}  # [linux]
+    - {{ cdt('libuuid') }}  # [linux]
+    - {{ cdt('libxext') }}  # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libsm-devel') }}  # [linux]
+    - {{ cdt('libice-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}  # [linux]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - cmake  # [not win]
     - cmake ==3.14.5  # [win]
     - ninja ==1.8.2  # [win]
