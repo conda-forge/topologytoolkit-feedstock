@@ -11,6 +11,7 @@ source:
   patches:
     - remove_linker_flags.patch
     - fix_ninja_build.patch  # [win]
+    - boost_system.patch  # [win]
 
 build:
   number: 0
