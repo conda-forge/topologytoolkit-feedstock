@@ -5,7 +5,7 @@ set BUILD_CONFIG=Release
 
 cmake .. -G "%CMAKE_GENERATOR%" ^
     -Wno-dev ^
-    -Tclangcl ^
+    -Tllvm ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
     -DCMAKE_INSTALL_PREFIX:PATH="%PREFIX%" ^
     -DCMAKE_INSTALL_LIBDIR="Library/lib" ^
