@@ -39,6 +39,7 @@ requirements:
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - cmake
     - ninja  # [win]
+    - openmp  # [win]
   host:
     - python
     - vtk ==9.0.1
