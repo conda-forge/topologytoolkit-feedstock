@@ -6,8 +6,12 @@ set BUILD_CONFIG=Release
 cmake .. -G "Ninja" ^
     -Wno-dev ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
-    -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
-    -DTTK_PYTHON_MODULE_DIR="%SP_DIR%" ^
+    -DCMAKE_INSTALL_PREFIX:PATH="%PREFIX%" ^
+    -DCMAKE_INSTALL_LIBDIR="Library/lib" ^
+    -DCMAKE_INSTALL_BINDIR="Library/bin" ^ 
+    -DCMAKE_INSTALL_INCLUDEDIR="Library/include" ^
+    -DCMAKE_INSTALL_DATAROOTDIR="Library/share" ^
+    -DCMAKE_INSTALL_DOCDIR="Library/share/doc" ^
     -DPython3_FIND_STRATEGY=LOCATION ^
     -DPython3_ROOT_DIR="%LIBRARY_PREFIX%" ^
     -DTTK_BUILD_VTK_WRAPPERS=ON ^
