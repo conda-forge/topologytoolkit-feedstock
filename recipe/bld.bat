@@ -5,6 +5,7 @@ set BUILD_CONFIG=Release
 
 cmake .. -G "Ninja" ^
     -Wno-dev ^
+    -Tclangcl ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
     -DCMAKE_INSTALL_PREFIX:PATH="%PREFIX%" ^
     -DCMAKE_INSTALL_LIBDIR="Library/lib" ^
@@ -21,7 +22,7 @@ cmake .. -G "Ninja" ^
     -DTTK_ENABLE_CPU_OPTIMIZATION=OFF ^
     -DTTK_ENABLE_KAMIKAZE=ON ^
     -DTTK_ENABLE_MPI=OFF ^
-    -DTTK_ENABLE_OPENMP=OFF
+    -DTTK_ENABLE_OPENMP=ON
 if errorlevel 1 exit 1
 
 ninja install
