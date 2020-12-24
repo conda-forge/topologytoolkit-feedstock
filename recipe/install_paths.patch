@@ -1,3 +1,16 @@
+diff --git a/CMake/BaseCode.cmake b/CMake/BaseCode.cmake
+index 01c94cf9..4b4dc8a5 100644
+--- a/CMake/BaseCode.cmake
++++ b/CMake/BaseCode.cmake
+@@ -47,7 +47,7 @@ function(ttk_add_base_library library)
+     )
+ 
+   if(ARG_HEADERS)
+-    install(FILES ${ARG_HEADERS} DESTINATION include/ttk/base)
++    install(FILES ${ARG_HEADERS} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/ttk/base")
+   endif()
+ endfunction()
+ 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 4abe459e..645ec0bf 100644
 --- a/CMakeLists.txt
