@@ -3,7 +3,7 @@ cd build
 
 set BUILD_CONFIG=Release
 
-cmake .. -G "Ninja" ^
+cmake .. -G "%CMAKE_GENERATOR%" ^
     -Wno-dev ^
     -Tclangcl ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
@@ -25,5 +25,5 @@ cmake .. -G "Ninja" ^
     -DTTK_ENABLE_OPENMP=ON
 if errorlevel 1 exit 1
 
-ninja install
+cmake --build . --config Release --target install
 if errorlevel 1 exit 1
