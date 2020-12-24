@@ -67,6 +67,8 @@ test:
     - examples/data/inputData.vtu
     - examples/python/example.py
   commands:
+    - ldd "${PREFIX}/bin/ttkMorseSmaleComplexCmd"  # [linux]
+    - readelf -d "${PREFIX}/bin/ttkMorseSmaleComplexCmd"  # [linux]
     - python examples/python/example.py examples/data/inputData.vtu
     - ttkMorseSmaleComplexCmd -i examples/data/inputData.vtu -o ""
 
