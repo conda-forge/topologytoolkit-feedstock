@@ -8,7 +8,7 @@ cmake .. -G "Ninja" ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
     -DCMAKE_INSTALL_PREFIX:PATH="%PREFIX%" ^
     -DCMAKE_INSTALL_LIBDIR="Library/lib" ^
-    -DCMAKE_INSTALL_BINDIR="Library/bin" ^ 
+    -DCMAKE_INSTALL_BINDIR="Library/bin" ^
     -DCMAKE_INSTALL_INCLUDEDIR="Library/include" ^
     -DCMAKE_INSTALL_DATAROOTDIR="Library/share" ^
     -DCMAKE_INSTALL_DOCDIR="Library/share/doc" ^
