@@ -3,9 +3,10 @@ cd build
 
 set BUILD_CONFIG=Release
 
-cmake .. -G "%CMAKE_GENERATOR%" ^
+cmake .. -G "Ninja" ^
     -Wno-dev ^
-    -Tllvm ^
+    -DCMAKE_C_COMPILER="%LIBRARY_BIN%/clang-cl.exe" ^
+    -DCMAKE_CXX_COMPILER="%LIBRARY_BIN%/clang-cl.exe" ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
     -DCMAKE_INSTALL_PREFIX:PATH="%PREFIX%" ^
     -DCMAKE_INSTALL_LIBDIR="Library/lib" ^
@@ -25,5 +26,5 @@ cmake .. -G "%CMAKE_GENERATOR%" ^
     -DTTK_ENABLE_OPENMP=ON
 if errorlevel 1 exit 1
 
-cmake --build . --config Release --target install
+ninja install
 if errorlevel 1 exit 1

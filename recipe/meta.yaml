@@ -40,6 +40,7 @@ requirements:
     - cmake
     - ninja  # [win]
     - openmp  # [win]
+    - clangdev  # [win]
   host:
     - python
     - vtk ==9.0.1
