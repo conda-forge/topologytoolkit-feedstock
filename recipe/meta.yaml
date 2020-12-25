@@ -39,10 +39,10 @@ requirements:
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - cmake
     - ninja  # [win]
-    - openmp  # [win]
     - clangdev  # [win]
   host:
     - python
+    - openmp  # [win]    
     - vtk ==9.0.1
     - tbb-devel
     - boost-cpp
@@ -55,6 +55,7 @@ requirements:
     - numpy
   run:
     - python
+    - openmp  # [win]
     - vtk ==9.0.1
     - zlib
     - graphviz  # [not win]
