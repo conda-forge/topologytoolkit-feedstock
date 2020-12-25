@@ -5,8 +5,8 @@ set BUILD_CONFIG=Release
 
 cmake .. -G "Ninja" ^
     -Wno-dev ^
-    -DCMAKE_C_COMPILER="%LIBRARY_BIN%/clang-cl.exe" ^
-    -DCMAKE_CXX_COMPILER="%LIBRARY_BIN%/clang-cl.exe" ^
+    -DCMAKE_C_COMPILER="clang-cl.exe" ^
+    -DCMAKE_CXX_COMPILER="clang-cl.exe" ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
     -DCMAKE_INSTALL_PREFIX:PATH="%PREFIX%" ^
     -DCMAKE_INSTALL_LIBDIR="Library/lib" ^
