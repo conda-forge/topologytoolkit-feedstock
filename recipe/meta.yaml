@@ -107,6 +107,7 @@ test:
   source_files:
     - examples/data/inputData.vtu
     - examples/python/example.py
+    - examples/pvpython/example.py  # [TTK_WITH_PARAVIEW]
   commands:
     - ldd "${PREFIX}/bin/ttkMorseSmaleComplexCmd"  # [linux]
     - readelf -d "${PREFIX}/bin/ttkMorseSmaleComplexCmd"  # [linux]
