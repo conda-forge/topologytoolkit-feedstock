@@ -14,6 +14,7 @@ cmake .. -G "Ninja" ^
     -DCMAKE_INSTALL_INCLUDEDIR="Library/include" ^
     -DCMAKE_INSTALL_DATAROOTDIR="Library/share" ^
     -DCMAKE_INSTALL_DOCDIR="Library/share/doc" ^
+    -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%" ^
     -DPython3_FIND_STRATEGY=LOCATION ^
     -DPython3_ROOT_DIR="%LIBRARY_PREFIX%" ^
     -DTTK_BUILD_VTK_WRAPPERS=ON ^
