@@ -30,3 +30,25 @@ if errorlevel 1 exit 1
 
 ninja install
 if errorlevel 1 exit 1
+
+if "%TTK_WITH_PARAVIEW%"=="True" (
+    set "ACTIVATE_DIR=%PREFIX%\etc\conda\activate.d"
+    set "DEACTIVATE_DIR=%PREFIX%\etc\conda\deactivate.d"
+    mkdir "%ACTIVATE_DIR%"
+    if errorlevel 1 exit 1
+    mkdir "%DEACTIVATE_DIR%"
+    if errorlevel 1 exit 1
+
+    copy "%RECIPE_DIR%\activate.bat" "%ACTIVATE_DIR%\topologytoolkit-activate.bat"
+    if errorlevel 1 exit 1
+
+    copy "%RECIPE_DIR%\deactivate.bat" "%DEACTIVATE_DIR%\topologytoolkit-deactivate.bat"
+    if errorlevel 1 exit 1
+
+    :: unix activation scripts for Windows Bash
+    copy "%RECIPE_DIR%\activate.sh" "%ACTIVATE_DIR%\topologytoolkit-activate.sh"
+    if errorlevel 1 exit 1
+
+    copy "%RECIPE_DIR%\deactivate.sh" "%DEACTIVATE_DIR%\topologytoolkit-deactivate.sh"
+    if errorlevel 1 exit 1
+)
