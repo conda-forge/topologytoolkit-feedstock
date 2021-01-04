@@ -3,6 +3,11 @@
 mkdir -p build
 cd build
 
+# remove Boost version from paraview's cmake config
+if [[ ${TTK_WITH_PARAVIEW} == "True" ]]; then
+    sed -z 's/Boost.*EXACT/Boost/' -i "${PREFIX}/lib/cmake/paraview-5.9/vtk/VTK-vtk-module-find-packages.cmake"
+fi
+
 cmake .. \
     -Wno-dev \
     -DCMAKE_BUILD_TYPE=Release \

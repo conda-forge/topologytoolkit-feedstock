@@ -1,6 +1,11 @@
 mkdir build
 cd build
 
+:: remove Boost version from paraview's cmake config
+if "%TTK_WITH_PARAVIEW%"=="True" (
+sed -z "s/Boost.*EXACT/Boost/" -i "%PREFIX%\Library\lib\cmake\paraview-5.8\vtk\VTK-vtk-module-find-packages.cmake"
+)
+
 set BUILD_CONFIG=Release
 
 cmake .. -G "Ninja" ^
@@ -32,23 +37,23 @@ ninja install
 if errorlevel 1 exit 1
 
 if "%TTK_WITH_PARAVIEW%"=="True" (
-    set "ACTIVATE_DIR=%PREFIX%\etc\conda\activate.d"
-    set "DEACTIVATE_DIR=%PREFIX%\etc\conda\deactivate.d"
-    mkdir "%ACTIVATE_DIR%"
-    if errorlevel 1 exit 1
-    mkdir "%DEACTIVATE_DIR%"
-    if errorlevel 1 exit 1
+set ACTIVATE_DIR=%PREFIX%\etc\conda\activate.d
+set DEACTIVATE_DIR=%PREFIX%\etc\conda\deactivate.d
+mkdir %ACTIVATE_DIR%
+if errorlevel 1 exit 1
+mkdir %DEACTIVATE_DIR%
+if errorlevel 1 exit 1
 
-    copy "%RECIPE_DIR%\activate.bat" "%ACTIVATE_DIR%\topologytoolkit-activate.bat"
-    if errorlevel 1 exit 1
+copy %RECIPE_DIR%\activate.bat %ACTIVATE_DIR%\topologytoolkit-activate.bat
+if errorlevel 1 exit 1
 
-    copy "%RECIPE_DIR%\deactivate.bat" "%DEACTIVATE_DIR%\topologytoolkit-deactivate.bat"
-    if errorlevel 1 exit 1
+copy %RECIPE_DIR%\deactivate.bat %DEACTIVATE_DIR%\topologytoolkit-deactivate.bat
+if errorlevel 1 exit 1
 
-    :: unix activation scripts for Windows Bash
-    copy "%RECIPE_DIR%\activate.sh" "%ACTIVATE_DIR%\topologytoolkit-activate.sh"
-    if errorlevel 1 exit 1
+:: unix activation scripts for Windows Bash
+copy %RECIPE_DIR%\activate.sh %ACTIVATE_DIR%\topologytoolkit-activate.sh
+if errorlevel 1 exit 1
 
-    copy "%RECIPE_DIR%\deactivate.sh" "%DEACTIVATE_DIR%\topologytoolkit-deactivate.sh"
-    if errorlevel 1 exit 1
+copy %RECIPE_DIR%\deactivate.sh %DEACTIVATE_DIR%\topologytoolkit-deactivate.sh
+if errorlevel 1 exit 1
 )
