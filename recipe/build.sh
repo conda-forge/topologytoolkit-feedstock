@@ -3,12 +3,6 @@
 mkdir -p build
 cd build
 
-#if [[ ${HOST} =~ .*linux.* ]]; then
-#    # temporary workaround for issue https://github.com/conda-forge/vtk-feedstock/issues/86
-#    find ${PREFIX}/lib/cmake/vtk-8.2/ -type f -print0 | xargs -0 \
-#        sed -i 's#/home/conda/feedstock_root/build_artifacts/vtk_.*_build_env/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib.*;##g'
-#fi
-
 cmake .. \
     -Wno-dev \
     -DCMAKE_BUILD_TYPE=Release \
@@ -27,3 +21,12 @@ cmake .. \
     -DTTK_ENABLE_OPENMP=ON
 
 cmake --build . --target install
+
+if [[ ${TTK_WITH_PARAVIEW} == "True" ]]; then
+    ACTIVATE_DIR=${PREFIX}/etc/conda/activate.d
+    DEACTIVATE_DIR=${PREFIX}/etc/conda/deactivate.d
+    mkdir -p ${ACTIVATE_DIR}
+    mkdir -p ${DEACTIVATE_DIR}
+    cp ${RECIPE_DIR}/activate.sh ${ACTIVATE_DIR}/topologytoolkit-activate.sh
+    cp ${RECIPE_DIR}/deactivate.sh ${DEACTIVATE_DIR}/topologytoolkit-deactivate.sh
+fi
