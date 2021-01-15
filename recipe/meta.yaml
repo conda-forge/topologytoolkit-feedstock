@@ -93,7 +93,6 @@ requirements:
     - eigen
     - spectralib
     - numpy
-    - icu ==67.1  # [osx and TTK_WITH_PARAVIEW]
   run:
     - python
     - openmp  # [win]
@@ -104,7 +103,6 @@ requirements:
     - sqlite
     - zfp
     - {{ pin_compatible('numpy') }}
-    - icu ==67.1  # [osx and TTK_WITH_PARAVIEW]
 
 test:
   imports:
