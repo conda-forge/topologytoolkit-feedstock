@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 boost_cpp:
 - 1.74.0
 c_compiler:
@@ -17,11 +17,11 @@ cxx_compiler:
 cxx_compiler_version:
 - '11'
 graphviz:
-- '2.40'
+- '2.47'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.16'
+- '1.17'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -35,11 +35,13 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.6.* *_cpython
 sqlite:
 - '3'
 target_platform:
 - osx-64
+tbb_devel:
+- '2020'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
