@@ -1,6 +1,6 @@
 {% set name = "topologytoolkit" %}
 {% set version = "0.9.9" %}
-{% set build = 3 %}
+{% set build = 4 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
