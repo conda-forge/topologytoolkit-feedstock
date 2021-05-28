@@ -3,30 +3,22 @@ TTK_WITH_PARAVIEW:
 boost_cpp:
 - 1.74.0
 c_compiler:
-- gcc
-c_compiler_version:
-- '9'
-cdt_name:
-- cos6
+- vs2017
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
-cxx_compiler_version:
-- '9'
-docker_image:
-- quay.io/condaforge/linux-anvil-comp7
-graphviz:
-- '2.40'
+- vs2017
 numpy:
-- '1.16'
+- '1.17'
+perl:
+- 5.26.2
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-  graphviz:
-    max_pin: x
+  perl:
+    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x
@@ -39,12 +31,10 @@ python:
 sqlite:
 - '3'
 target_platform:
-- linux-64
+- win-64
+tbb_devel:
+- '2020'
 zip_keys:
-- - c_compiler_version
-  - cxx_compiler_version
-- - cdt_name
-  - docker_image
 - - python
   - numpy
 zlib:

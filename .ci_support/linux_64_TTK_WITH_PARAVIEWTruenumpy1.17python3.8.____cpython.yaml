@@ -1,24 +1,32 @@
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 boost_cpp:
 - 1.74.0
 c_compiler:
-- vs2017
+- gcc
+c_compiler_version:
+- '9'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2017
+- gxx
+cxx_compiler_version:
+- '9'
+docker_image:
+- quay.io/condaforge/linux-anvil-comp7
+graphviz:
+- '2.47'
 numpy:
-- '1.16'
-perl:
-- 5.26.2
+- '1.17'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-  perl:
-    max_pin: x.x.x
+  graphviz:
+    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
@@ -27,12 +35,18 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.7.* *_cpython
+- 3.8.* *_cpython
 sqlite:
 - '3'
 target_platform:
-- win-64
+- linux-64
+tbb_devel:
+- '2020'
 zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+- - cdt_name
+  - docker_image
 - - python
   - numpy
 zlib:

@@ -19,7 +19,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-comp7
 graphviz:
-- '2.40'
+- '2.47'
 numpy:
 - '1.19'
 pin_run_as_build:
@@ -40,6 +40,8 @@ sqlite:
 - '3'
 target_platform:
 - linux-64
+tbb_devel:
+- '2020'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

@@ -1,5 +1,5 @@
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 boost_cpp:
 - 1.74.0
 c_compiler:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - vs2017
 numpy:
-- '1.16'
+- '1.17'
 perl:
 - 5.26.2
 pin_run_as_build:
@@ -27,11 +27,13 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.7.* *_cpython
 sqlite:
 - '3'
 target_platform:
 - win-64
+tbb_devel:
+- '2020'
 zip_keys:
 - - python
   - numpy
