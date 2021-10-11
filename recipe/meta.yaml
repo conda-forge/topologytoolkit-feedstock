@@ -91,7 +91,7 @@ requirements:
     - sqlite
     - zfp
     - eigen
-    - spectralib
+    - spectralib ==0.9.0
     - numpy
   run:
     - python
