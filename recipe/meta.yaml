@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/topology-tool-kit/ttk/archive/{{ version }}.zip
-  sha256: cdd8a2c3236b0cc6d332d4dd52cf0911ff3a2ab41ec4ea9fe3331a696a181963
+  sha256: 98f591f1c65e37fee94b9a31e042b813601b4810c3b16b7b322447271338db71
   patches:
     - install_paths.patch
     - remove_linker_flags.patch
