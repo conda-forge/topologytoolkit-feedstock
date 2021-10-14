@@ -1,18 +1,18 @@
 diff --git a/CMake/VTKModule.cmake b/CMake/VTKModule.cmake
-index bb1ced1a..ee6c5aa3 100644
+index e94a74fa..6c8baa24 100644
 --- a/CMake/VTKModule.cmake
 +++ b/CMake/VTKModule.cmake
-@@ -3,13 +3,6 @@
- macro(ttk_parse_module_file moduleFile)
-   # reconfigure when the module file is changed
-   get_filename_component(moduleRealFile ${moduleFile} REALPATH)
--  set_property(
--    DIRECTORY
--      "${CMAKE_CURRENT_SOURCE_DIR}"
--    APPEND PROPERTY
--    CMAKE_CONFIGURE_DEPENDS
--      ${moduleRealFile}
--  )
+@@ -5,13 +5,6 @@ macro(ttk_parse_module_file moduleFile)
+   if(moduleFile MATCHES "ttk.module$")
+     # rebuild when ttk.module is changed
+     # already done by VTK for vtk.module
+-    set_property(
+-      DIRECTORY
+-        "${CMAKE_CURRENT_SOURCE_DIR}"
+-      APPEND PROPERTY
+-      CMAKE_CONFIGURE_DEPENDS
+-        ${moduleRealFile}
+-    )
+   endif()
    file(READ ${moduleRealFile} moduleFileContent)
    # Replace comments.
-   string(REGEX REPLACE "#[^\n]*\n" "\n" moduleFileContent "${moduleFileContent}")

@@ -1,8 +1,8 @@
 diff --git a/CMake/CompilerFlags.cmake b/CMake/CompilerFlags.cmake
-index 0c44f5c7..68fa5542 100644
+index 5919753b..044fe9ee 100644
 --- a/CMake/CompilerFlags.cmake
 +++ b/CMake/CompilerFlags.cmake
-@@ -15,13 +15,6 @@ if (NOT MSVC) # GCC and Clang
+@@ -20,14 +20,6 @@ if (NOT MSVC) # GCC and Clang
      list(APPEND TTK_COMPILER_FLAGS -O0 -g -pg)
    endif()
  
@@ -13,6 +13,7 @@ index 0c44f5c7..68fa5542 100644
 -      -Wl,--no-undefined
 -      )
 -  endif()
- 
+-
  elseif(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang" AND "x${CMAKE_CXX_SIMULATE_ID}" STREQUAL "xMSVC")
    # clang-cl on Windows
+   # c.f. https://stackoverflow.com/questions/50857779/cmake-detects-clang-cl-as-clang

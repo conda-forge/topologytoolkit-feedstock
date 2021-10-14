@@ -1,6 +1,6 @@
 {% set name = "topologytoolkit" %}
-{% set version = "0.9.9" %}
-{% set build = 5 %}
+{% set version = "1.0.0" %}
+{% set build = 0 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
@@ -15,7 +15,6 @@ source:
     - install_paths.patch
     - remove_linker_flags.patch
     - fix_ninja_build.patch  # [win]
-    - boost_system.patch  # [win]
     - remove_rpaths.patch  # [linux]
 
 build:
@@ -83,7 +82,7 @@ requirements:
     - python
     - openmp  # [win]    
     - paraview  # [TTK_WITH_PARAVIEW]
-    - vtk ==9.0.1  # [not TTK_WITH_PARAVIEW]
+    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
     - boost-cpp
     - zlib
@@ -97,7 +96,7 @@ requirements:
     - python
     - openmp  # [win]
     - paraview  # [TTK_WITH_PARAVIEW]
-    - vtk ==9.0.1  # [not TTK_WITH_PARAVIEW]
+    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW]
     - zlib
     - graphviz  # [not win]
     - sqlite
