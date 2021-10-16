@@ -82,8 +82,7 @@ requirements:
     - python
     - openmp  # [win]    
     - paraview  # [TTK_WITH_PARAVIEW]
-    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW and not linux]
-    - vtk ==9.0.1  # [not TTK_WITH_PARAVIEW and linux]
+    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
     - boost-cpp
     - zlib
@@ -97,8 +96,7 @@ requirements:
     - python
     - openmp  # [win]
     - paraview  # [TTK_WITH_PARAVIEW]
-    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW and not linux]
-    - vtk ==9.0.1  # [not TTK_WITH_PARAVIEW and linux]
+    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW]
     - zlib
     - graphviz  # [not win]
     - sqlite
