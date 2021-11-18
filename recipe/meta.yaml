@@ -81,8 +81,9 @@ requirements:
   host:
     - python
     - openmp  # [win]    
-    - paraview  # [TTK_WITH_PARAVIEW]
-    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW]
+    - paraview  # [TTK_WITH_PARAVIEW and win]
+    - paraview ==5.9.1=*_qt  # [TTK_WITH_PARAVIEW and not win]
+    - vtk ==9.1.0  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
     - boost-cpp
     - zlib
@@ -95,8 +96,9 @@ requirements:
   run:
     - python
     - openmp  # [win]
-    - paraview  # [TTK_WITH_PARAVIEW]
-    - vtk ==9.0.3  # [not TTK_WITH_PARAVIEW]
+    - paraview  # [TTK_WITH_PARAVIEW and win]
+    - paraview ==5.9.1=*_qt  # [TTK_WITH_PARAVIEW and not win]
+    - vtk ==9.1.0  # [not TTK_WITH_PARAVIEW]
     - zlib
     - graphviz  # [not win]
     - sqlite
