@@ -13,11 +13,9 @@ cxx_compiler:
 numpy:
 - '1.19'
 perl:
-- 5.26.2
+- 5.32.1
 pin_run_as_build:
   boost-cpp:
-    max_pin: x.x.x
-  perl:
     max_pin: x.x.x
   python:
     min_pin: x.x
