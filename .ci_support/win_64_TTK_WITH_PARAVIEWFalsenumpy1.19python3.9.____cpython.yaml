@@ -31,7 +31,7 @@ sqlite:
 target_platform:
 - win-64
 tbb_devel:
-- '2020'
+- '2021'
 zip_keys:
 - - python
   - numpy
