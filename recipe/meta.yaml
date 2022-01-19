@@ -75,6 +75,7 @@ requirements:
     - {{ cdt('xorg-x11-server-xvfb') }}  # [linux and TTK_WITH_PARAVIEW]
     - {{ cdt('libxt-devel') }}           # [linux and TTK_WITH_PARAVIEW]
     - cmake
+    - make  # [not win]
     - ninja  # [win]
     - clangdev  # [win]
     - perl  # [win]
