@@ -93,6 +93,7 @@ requirements:
     - eigen
     - spectralib
     - numpy
+    - icu
   run:
     - python
     - openmp  # [win]
