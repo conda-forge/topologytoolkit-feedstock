@@ -18,6 +18,8 @@ cxx_compiler_version:
 - '13'
 graphviz:
 - '3'
+icu:
+- '69'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
