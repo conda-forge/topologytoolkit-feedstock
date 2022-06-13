@@ -19,7 +19,6 @@ source:
 
 build:
   number: {{ build }}
-  skip: True  # [TTK_WITH_PARAVIEW and linux and py==36]
   skip: True  # [TTK_WITH_PARAVIEW and osx and py==37]
   skip: True  # [TTK_WITH_PARAVIEW and win and py==39]
 
@@ -75,6 +74,7 @@ requirements:
     - {{ cdt('xorg-x11-server-xvfb') }}  # [linux and TTK_WITH_PARAVIEW]
     - {{ cdt('libxt-devel') }}           # [linux and TTK_WITH_PARAVIEW]
     - cmake
+    - make  # [not win]
     - ninja  # [win]
     - clangdev  # [win]
     - perl  # [win]
