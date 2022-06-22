@@ -16,6 +16,7 @@ source:
     - remove_linker_flags.patch
     - fix_ninja_build.patch  # [win]
     - remove_rpaths.patch  # [linux]
+    - fix_tests.patch
 
 build:
   number: {{ build }}
