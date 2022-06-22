@@ -118,7 +118,7 @@ test:
     - python examples/python/example.py examples/data/inputData.vtu
     - ttkMorseSmaleComplexCmd -i examples/data/inputData.vtu -o ""
     - python examples/pvpython/example.py examples/data/inputData.vtu  # [TTK_WITH_PARAVIEW]
-    - pvpython examples/pvpython/example.py examples/data/inputData.vtu  # [TTK_WITH_PARAVIEW]
+    #- pvpython examples/pvpython/example.py examples/data/inputData.vtu  # [TTK_WITH_PARAVIEW]
 
 about:
   home: https://topology-tool-kit.github.io/
