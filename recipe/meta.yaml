@@ -21,7 +21,7 @@ source:
 build:
   number: {{ build }}
   skip: True  # [TTK_WITH_PARAVIEW and osx and py==37]
-  skip: True  # [TTK_WITH_PARAVIEW and win and py==39]
+  skip: True  # [TTK_WITH_PARAVIEW and win]
 
   # the package variant can be selected via the build string:
   # `conda install -c conda-forge "topologytoolkit * no_paraview*"` for vtk-variant
