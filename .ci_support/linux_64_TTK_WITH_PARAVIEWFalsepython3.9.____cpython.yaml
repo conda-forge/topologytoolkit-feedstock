@@ -21,7 +21,7 @@ docker_image:
 graphviz:
 - '3'
 icu:
-- '69'
+- '70'
 numpy:
 - '1.19'
 pin_run_as_build:
