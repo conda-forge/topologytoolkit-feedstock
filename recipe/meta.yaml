@@ -1,6 +1,6 @@
 {% set name = "topologytoolkit" %}
-{% set version = "1.0.0" %}
-{% set build = 7 %}
+{% set version = "1.1.0" %}
+{% set build = 0 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
@@ -10,13 +10,12 @@ package:
 
 source:
   url: https://github.com/topology-tool-kit/ttk/archive/{{ version }}.zip
-  sha256: 98f591f1c65e37fee94b9a31e042b813601b4810c3b16b7b322447271338db71
+  sha256: 797e0955a3d6a289823a1dd9437b4c96f516d0494f4a34a8ed7a7cad31acb67d
   patches:
     - install_paths.patch
     - remove_linker_flags.patch
     - fix_ninja_build.patch  # [win]
     - remove_rpaths.patch  # [linux]
-    - fix_tests.patch
 
 build:
   number: {{ build }}
