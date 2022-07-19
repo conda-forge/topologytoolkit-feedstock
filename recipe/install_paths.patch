@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 1e8d59fb..204786ad 100644
+index 4dbb0b5f..63b50d43 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -92,11 +92,11 @@ install(
+@@ -34,11 +34,11 @@ install(
    EXPORT
      TTKBaseTargets
    RUNTIME DESTINATION
@@ -17,7 +17,7 @@ index 1e8d59fb..204786ad 100644
    )
  
  install(
-@@ -140,11 +140,11 @@ if(TTK_BUILD_VTK_WRAPPERS)
+@@ -119,11 +119,11 @@ if(TTK_BUILD_VTK_WRAPPERS)
      EXPORT
        TTKVTKTargets
      RUNTIME DESTINATION

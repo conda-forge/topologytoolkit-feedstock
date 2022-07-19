@@ -1,8 +1,8 @@
 diff --git a/CMake/CompilerFlags.cmake b/CMake/CompilerFlags.cmake
-index 5919753b..044fe9ee 100644
+index be5d63e7..de1eef3a 100644
 --- a/CMake/CompilerFlags.cmake
 +++ b/CMake/CompilerFlags.cmake
-@@ -20,14 +20,6 @@ if (NOT MSVC) # GCC and Clang
+@@ -24,14 +24,6 @@ if (NOT MSVC) # GCC and Clang
      list(APPEND TTK_COMPILER_FLAGS -O0 -g -pg)
    endif()
  
