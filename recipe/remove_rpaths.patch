@@ -1,8 +1,8 @@
-diff --git a/config.cmake b/config.cmake
-index 5830886a..e4bd2d0d 100644
---- a/config.cmake
-+++ b/config.cmake
-@@ -268,17 +268,3 @@ endif()
+diff --git a/CMake/config.cmake b/CMake/config.cmake
+index 6676a13d..7df188ad 100644
+--- a/CMake/config.cmake
++++ b/CMake/config.cmake
+@@ -304,17 +304,3 @@ endif()
  
  # ParaView plugins go to a subdirectory with this name
  set(TTK_PLUGIN_SUBDIR "TopologyToolKit")
