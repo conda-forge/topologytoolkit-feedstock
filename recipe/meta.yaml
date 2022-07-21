@@ -17,6 +17,7 @@ source:
     - fix_ninja_build.patch  # [win]
     - remove_rpaths.patch  # [linux]
     - remove_diy_dependency.patch
+    - remove_packaging_dependency.patch
 
 build:
   number: {{ build }}
