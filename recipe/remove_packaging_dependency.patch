@@ -1,0 +1,39 @@
+diff --git a/examples/python/example.py b/examples/python/example.py
+index 37151b17..0e4a1206 100755
+--- a/examples/python/example.py
++++ b/examples/python/example.py
+@@ -18,7 +18,6 @@
+ # /// of IEEE VIS 2017.
+ 
+ import sys
+-from packaging import version
+ 
+ from vtk import (
+     vtkDataObject,
+@@ -37,6 +36,8 @@ from topologytoolkit import (
+     ttkTopologicalSimplification,
+ )
+ 
++version = lambda s: list(map(int, s.split('.')))
++
+ if len(sys.argv) == 2:
+     inputFilePath = sys.argv[1]
+ else:
+@@ -65,7 +66,7 @@ criticalPairs.SetInputConnection(diagram.GetOutputPort())
+ criticalPairs.SetInputArrayToProcess(
+     0, 0, 0, vtkDataObject.FIELD_ASSOCIATION_CELLS, "PairIdentifier"
+ )
+-if version.parse(vtkVersion.GetVTKVersion()) < version.parse("9.2.0"):
++if version(vtkVersion.GetVTKVersion()) < version("9.2.0"):
+     criticalPairs.ThresholdBetween(-0.1, 999999)
+ else:
+     criticalPairs.SetThresholdFunction(vtkThreshold.THRESHOLD_BETWEEN)
+@@ -78,7 +79,7 @@ persistentPairs.SetInputConnection(criticalPairs.GetOutputPort())
+ persistentPairs.SetInputArrayToProcess(
+     0, 0, 0, vtkDataObject.FIELD_ASSOCIATION_CELLS, "Persistence"
+ )
+-if version.parse(vtkVersion.GetVTKVersion()) < version.parse("9.2.0"):
++if version(vtkVersion.GetVTKVersion()) < version("9.2.0"):
+     persistentPairs.ThresholdBetween(0.05, 999999)
+ else:
+     persistentPairs.SetThresholdFunction(vtkThreshold.THRESHOLD_BETWEEN)
