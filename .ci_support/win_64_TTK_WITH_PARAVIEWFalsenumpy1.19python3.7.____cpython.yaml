@@ -34,6 +34,8 @@ target_platform:
 - win-64
 tbb_devel:
 - '2021'
+zfp:
+- '1.0'
 zip_keys:
 - - python
   - numpy
