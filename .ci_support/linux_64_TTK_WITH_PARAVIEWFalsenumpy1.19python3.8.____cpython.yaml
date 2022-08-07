@@ -44,6 +44,8 @@ target_platform:
 - linux-64
 tbb_devel:
 - '2021'
+zfp:
+- '1.0'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
