@@ -1,29 +1,29 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 boost_cpp:
 - 1.78.0
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '14'
+- '11'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '14'
+- '11'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 graphviz:
 - '6'
 icu:
 - '70'
-macos_machine:
-- x86_64-apple-darwin13.4.0
 numpy:
-- '1.19'
+- '1.20'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -32,16 +32,12 @@ pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
-  sqlite:
-    max_pin: x
-  zlib:
-    max_pin: x.x
 python:
 - 3.9.* *_cpython
 sqlite:
 - '3'
 target_platform:
-- osx-64
+- linux-64
 tbb_devel:
 - '2021'
 zfp:
