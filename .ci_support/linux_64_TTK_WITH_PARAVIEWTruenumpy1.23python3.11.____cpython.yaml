@@ -1,5 +1,5 @@
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 boost_cpp:
 - 1.78.0
 c_compiler:
@@ -23,7 +23,7 @@ graphviz:
 icu:
 - '70'
 numpy:
-- '1.21'
+- '1.23'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -33,7 +33,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.11.* *_cpython
 sqlite:
 - '3'
 target_platform:
