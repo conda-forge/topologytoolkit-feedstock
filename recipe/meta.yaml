@@ -96,6 +96,7 @@ requirements:
     - spectralib
     - numpy
     - icu
+    - cli11  # [TTK_WITH_PARAVIEW]
   run:
     - python
     - openmp  # [win]
