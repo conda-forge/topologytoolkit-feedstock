@@ -96,7 +96,12 @@ requirements:
     - spectralib
     - numpy
     - icu
+    - nlohmann_json  # [TTK_WITH_PARAVIEW]
+    - proj  # [TTK_WITH_PARAVIEW]
+    - libharu  # [TTK_WITH_PARAVIEW]
     - cli11  # [TTK_WITH_PARAVIEW]
+    - fmt  # [TTK_WITH_PARAVIEW]
+    - exprtk  # [TTK_WITH_PARAVIEW]
   run:
     - python
     - openmp  # [win]
