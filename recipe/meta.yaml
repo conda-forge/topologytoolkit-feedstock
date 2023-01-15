@@ -1,6 +1,6 @@
 {% set name = "topologytoolkit" %}
 {% set version = "1.1.0" %}
-{% set build = 6 %}
+{% set build = 7 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
@@ -84,7 +84,7 @@ requirements:
     - python
     - openmp  # [win]    
     - paraview  # [TTK_WITH_PARAVIEW and win]
-    - paraview ==5.10.1=*_qt  # [TTK_WITH_PARAVIEW and not win]
+    - paraview * *_qt  # [TTK_WITH_PARAVIEW and not win]
     - vtk  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
     - boost-cpp
@@ -96,11 +96,17 @@ requirements:
     - spectralib
     - numpy
     - icu
+    - nlohmann_json  # [TTK_WITH_PARAVIEW]
+    - proj  # [TTK_WITH_PARAVIEW]
+    - libharu  # [TTK_WITH_PARAVIEW]
+    - cli11  # [TTK_WITH_PARAVIEW]
+    - fmt  # [TTK_WITH_PARAVIEW]
+    - exprtk  # [TTK_WITH_PARAVIEW]
   run:
     - python
     - openmp  # [win]
     - paraview  # [TTK_WITH_PARAVIEW and win]
-    - paraview ==5.10.1=*_qt  # [TTK_WITH_PARAVIEW and not win]
+    - paraview * *_qt  # [TTK_WITH_PARAVIEW and not win]
     - vtk  # [not TTK_WITH_PARAVIEW]
     - zlib
     - graphviz  # [not win]
