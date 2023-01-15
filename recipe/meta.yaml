@@ -84,7 +84,7 @@ requirements:
     - python
     - openmp  # [win]    
     - paraview  # [TTK_WITH_PARAVIEW and win]
-    - paraview ==*=*_qt  # [TTK_WITH_PARAVIEW and not win]
+    - paraview ==*_qt  # [TTK_WITH_PARAVIEW and not win]
     - vtk  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
     - boost-cpp
@@ -100,7 +100,7 @@ requirements:
     - python
     - openmp  # [win]
     - paraview  # [TTK_WITH_PARAVIEW and win]
-    - paraview ==*=*_qt  # [TTK_WITH_PARAVIEW and not win]
+    - paraview ==*_qt  # [TTK_WITH_PARAVIEW and not win]
     - vtk  # [not TTK_WITH_PARAVIEW]
     - zlib
     - graphviz  # [not win]
