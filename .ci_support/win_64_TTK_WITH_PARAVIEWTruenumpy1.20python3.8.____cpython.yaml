@@ -1,5 +1,5 @@
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 boost_cpp:
 - 1.78.0
 c_compiler:
