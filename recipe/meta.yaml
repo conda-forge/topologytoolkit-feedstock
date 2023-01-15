@@ -1,6 +1,6 @@
 {% set name = "topologytoolkit" %}
 {% set version = "1.1.0" %}
-{% set build = 7 %}
+{% set build = 8 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
@@ -22,7 +22,6 @@ source:
 build:
   number: {{ build }}
   skip: True  # [TTK_WITH_PARAVIEW and osx and py==37]
-  skip: True  # [TTK_WITH_PARAVIEW and win]
 
   # the package variant can be selected via the build string:
   # `conda install -c conda-forge "topologytoolkit * no_paraview*"` for vtk-variant
@@ -83,8 +82,7 @@ requirements:
   host:
     - python
     - openmp  # [win]    
-    - paraview  # [TTK_WITH_PARAVIEW and win]
-    - paraview * *_qt  # [TTK_WITH_PARAVIEW and not win]
+    - paraview * *_qt  # [TTK_WITH_PARAVIEW]
     - vtk  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
     - boost-cpp
@@ -105,8 +103,7 @@ requirements:
   run:
     - python
     - openmp  # [win]
-    - paraview  # [TTK_WITH_PARAVIEW and win]
-    - paraview * *_qt  # [TTK_WITH_PARAVIEW and not win]
+    - paraview * *_qt  # [TTK_WITH_PARAVIEW]
     - vtk  # [not TTK_WITH_PARAVIEW]
     - zlib
     - graphviz  # [not win]
