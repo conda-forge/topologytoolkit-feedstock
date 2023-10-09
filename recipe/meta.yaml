@@ -93,7 +93,8 @@ requirements:
     - icu
     - libboost-headers
     - numpy
-    - openmp    # [win]
+    - libgomp        # [linux]
+    - llvm-openmp    # [osx or win]
     - spectralib
     - sqlite
     - tbb-devel
@@ -111,7 +112,6 @@ requirements:
   run:
     - python
     - graphviz  # [unix]
-    - openmp    # [win]
     - zfp
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
     - vtk               # [not TTK_WITH_PARAVIEW]
