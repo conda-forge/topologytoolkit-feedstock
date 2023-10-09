@@ -35,6 +35,15 @@ build:
   track_features:
     - ttk_without_paraview  # [not TTK_WITH_PARAVIEW]
 
+  ignore_run_exports_from:
+    - expat
+    - exprtk
+    - fmt
+    - icu
+    - libharu
+    - proj
+    - tbb-devel
+
 requirements:
   build:
     - {{ compiler('c') }}
@@ -103,9 +112,7 @@ requirements:
     - python
     - graphviz  # [unix]
     - openmp    # [win]
-    - sqlite
     - zfp
-    - zlib
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
     - vtk               # [not TTK_WITH_PARAVIEW]
     - {{ pin_compatible('numpy') }}
