@@ -91,6 +91,7 @@ requirements:
     - zfp
     - zlib
     - cli11             # [TTK_WITH_PARAVIEW]
+    - expat             # [TTK_WITH_PARAVIEW]
     - exprtk            # [TTK_WITH_PARAVIEW]
     - fmt               # [TTK_WITH_PARAVIEW]
     - libharu           # [TTK_WITH_PARAVIEW]
