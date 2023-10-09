@@ -73,40 +73,40 @@ requirements:
     - {{ cdt('xorg-x11-server-xvfb') }}  # [linux and TTK_WITH_PARAVIEW]
     - {{ cdt('libxt-devel') }}           # [linux and TTK_WITH_PARAVIEW]
     - cmake
-    - make  # [not win]
-    - ninja  # [win]
+    - make      # [unix]
+    - ninja     # [win]
     - clangdev  # [win]
-    - perl  # [win]
+    - perl      # [win]
   host:
     - python
-    - openmp  # [win]    
-    - paraview * *_qt  # [TTK_WITH_PARAVIEW]
-    - vtk  # [not TTK_WITH_PARAVIEW]
-    - tbb-devel
-    - libboost-headers
-    - zlib
-    - graphviz  # [not win]
-    - sqlite
-    - zfp
     - eigen
-    - spectralib
-    - numpy
+    - graphviz  # [unix]
     - icu
-    - nlohmann_json  # [TTK_WITH_PARAVIEW]
-    - proj  # [TTK_WITH_PARAVIEW]
-    - libharu  # [TTK_WITH_PARAVIEW]
-    - cli11  # [TTK_WITH_PARAVIEW]
-    - fmt  # [TTK_WITH_PARAVIEW]
-    - exprtk  # [TTK_WITH_PARAVIEW]
+    - libboost-headers
+    - numpy
+    - openmp    # [win]
+    - spectralib
+    - sqlite
+    - tbb-devel
+    - zfp
+    - zlib
+    - cli11             # [TTK_WITH_PARAVIEW]
+    - exprtk            # [TTK_WITH_PARAVIEW]
+    - fmt               # [TTK_WITH_PARAVIEW]
+    - libharu           # [TTK_WITH_PARAVIEW]
+    - nlohmann_json     # [TTK_WITH_PARAVIEW]
+    - paraview * *_qt   # [TTK_WITH_PARAVIEW]
+    - proj              # [TTK_WITH_PARAVIEW]
+    - vtk               # [not TTK_WITH_PARAVIEW]
   run:
     - python
-    - openmp  # [win]
-    - paraview * *_qt  # [TTK_WITH_PARAVIEW]
-    - vtk  # [not TTK_WITH_PARAVIEW]
-    - zlib
-    - graphviz  # [not win]
+    - graphviz  # [unix]
+    - openmp    # [win]
     - sqlite
     - zfp
+    - zlib
+    - paraview * *_qt   # [TTK_WITH_PARAVIEW]
+    - vtk               # [not TTK_WITH_PARAVIEW]
     - {{ pin_compatible('numpy') }}
 
 test:
