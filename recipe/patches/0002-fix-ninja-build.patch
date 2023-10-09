@@ -1,0 +1,27 @@
+From a692e6a13acd90c8604ed5f088643d39a6382f98 Mon Sep 17 00:00:00 2001
+From: lhofmann <lhofmann@users.noreply.github.com>
+Date: Wed, 23 Dec 2020 15:00:43 +0100
+Subject: [PATCH 2/6] fix ninja build
+
+---
+ CMake/VTKModule.cmake | 7 -------
+ 1 file changed, 7 deletions(-)
+
+diff --git a/CMake/VTKModule.cmake b/CMake/VTKModule.cmake
+index ced0364ec..92213e00d 100644
+--- a/CMake/VTKModule.cmake
++++ b/CMake/VTKModule.cmake
+@@ -5,13 +5,6 @@ macro(ttk_parse_module_file moduleFile)
+   if(moduleFile MATCHES "ttk.module$")
+     # rebuild when ttk.module is changed
+     # already done by VTK for vtk.module
+-    set_property(
+-      DIRECTORY
+-        "${CMAKE_CURRENT_SOURCE_DIR}"
+-      APPEND PROPERTY
+-      CMAKE_CONFIGURE_DEPENDS
+-        ${moduleRealFile}
+-    )
+   endif()
+   file(READ ${moduleRealFile} moduleFileContent)
+   # Replace comments.

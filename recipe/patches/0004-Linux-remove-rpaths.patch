@@ -1,0 +1,31 @@
+From c8324013ee19c8e5d34e1f72b0a54ff28a7cc5db Mon Sep 17 00:00:00 2001
+From: lhofmann <lhofmann@users.noreply.github.com>
+Date: Wed, 23 Dec 2020 18:55:50 +0100
+Subject: [PATCH 4/6] Linux: remove rpaths
+
+---
+ CMake/config.cmake | 14 --------------
+ 1 file changed, 14 deletions(-)
+
+diff --git a/CMake/config.cmake b/CMake/config.cmake
+index 6676a13d2..7df188ad0 100644
+--- a/CMake/config.cmake
++++ b/CMake/config.cmake
+@@ -304,17 +304,3 @@ endif()
+ 
+ # ParaView plugins go to a subdirectory with this name
+ set(TTK_PLUGIN_SUBDIR "TopologyToolKit")
+-
+-# Install rpath
+-if(NOT DEFINED CMAKE_MACOSX_RPATH)
+-  set(CMAKE_MACOSX_RPATH TRUE)
+-endif()
+-if(NOT DEFINED CMAKE_BUILD_WITH_INSTALL_RPATH)
+-  set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+-endif()
+-if(NOT DEFINED CMAKE_INSTALL_RPATH)
+-  set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
+-endif()
+-if(NOT DEFINED CMAKE_INSTALL_RPATH_USE_LINK_PATH)
+-  set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+-endif()
