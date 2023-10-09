@@ -85,7 +85,7 @@ requirements:
     - paraview * *_qt  # [TTK_WITH_PARAVIEW]
     - vtk  # [not TTK_WITH_PARAVIEW]
     - tbb-devel
-    - boost-cpp
+    - libboost-headers
     - zlib
     - graphviz  # [not win]
     - sqlite
