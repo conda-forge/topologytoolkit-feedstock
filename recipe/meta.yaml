@@ -12,12 +12,12 @@ source:
   url: https://github.com/topology-tool-kit/ttk/archive/{{ version }}.zip
   sha256: c1b5e2bc592845fd61460d635429d2fb117c3a5a4e8236b4f7736ea9e2196d9b
   patches:
-    - install_paths.patch
-    - remove_linker_flags.patch
-    - fix_ninja_build.patch  # [win]
-    - remove_rpaths.patch  # [linux]
-    - remove_diy_dependency.patch
-    - remove_packaging_dependency.patch
+    - patches/0001-remove-too-restrictive-linker-flags.patch
+    - patches/0002-fix-ninja-build.patch                                # [win]
+    - patches/0003-remove-ttk-subdir-from-install-destinations.patch
+    - patches/0004-Linux-remove-rpaths.patch                            # [linux]
+    - patches/0005-Remove-DIY-dependency.patch
+    - patches/0006-Remove-python-packaging-dependency-from-example.patch
 
 build:
   number: {{ build }}

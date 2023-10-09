@@ -1,0 +1,43 @@
+From 570bc473659ef068c1e32b0242b4b7f1e460914f Mon Sep 17 00:00:00 2001
+From: lhofmann <lhofmann@users.noreply.github.com>
+Date: Wed, 23 Dec 2020 16:18:30 +0100
+Subject: [PATCH 3/6] remove ttk subdir from install destinations
+
+---
+ CMakeLists.txt | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4dbb0b5f3..63b50d431 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -34,11 +34,11 @@ install(
+   EXPORT
+     TTKBaseTargets
+   RUNTIME DESTINATION
+-    ${CMAKE_INSTALL_BINDIR}/ttk
++    ${CMAKE_INSTALL_BINDIR}
+   ARCHIVE DESTINATION
+-    ${CMAKE_INSTALL_LIBDIR}/ttk
++    ${CMAKE_INSTALL_LIBDIR}
+   LIBRARY DESTINATION
+-    ${CMAKE_INSTALL_LIBDIR}/ttk
++    ${CMAKE_INSTALL_LIBDIR}
+   )
+ 
+ install(
+@@ -119,11 +119,11 @@ if(TTK_BUILD_VTK_WRAPPERS)
+     EXPORT
+       TTKVTKTargets
+     RUNTIME DESTINATION
+-      ${CMAKE_INSTALL_BINDIR}/ttk
++      ${CMAKE_INSTALL_BINDIR}
+     ARCHIVE DESTINATION
+-      ${CMAKE_INSTALL_LIBDIR}/ttk
++      ${CMAKE_INSTALL_LIBDIR}
+     LIBRARY DESTINATION
+-      ${CMAKE_INSTALL_LIBDIR}/ttk
++      ${CMAKE_INSTALL_LIBDIR}
+     )
+ 
+   install(
