@@ -1,11 +1,10 @@
-{% set name = "topologytoolkit" %}
 {% set version = "1.2.0" %}
 {% set build = 0 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
 package:
-  name: {{ name|lower }}
+  name: topologytoolkit
   version: {{ version }}
 
 source:
@@ -21,7 +20,7 @@ source:
 
 build:
   number: {{ build }}
-  skip: True  # [TTK_WITH_PARAVIEW and osx and py==37]
+  skip: true  # [TTK_WITH_PARAVIEW and osx]
 
   # the package variant can be selected via the build string:
   # `conda install -c conda-forge "topologytoolkit * no_paraview*"` for vtk-variant
