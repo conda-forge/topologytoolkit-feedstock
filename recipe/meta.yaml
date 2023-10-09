@@ -16,7 +16,6 @@ source:
     - patches/0003-remove-ttk-subdir-from-install-destinations.patch
     - patches/0004-Linux-remove-rpaths.patch                            # [linux]
     - patches/0005-Remove-DIY-dependency.patch
-    - patches/0006-Remove-python-packaging-dependency-from-example.patch
 
 build:
   number: {{ build }}

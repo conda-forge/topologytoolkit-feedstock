@@ -1,14 +1,14 @@
-From c8324013ee19c8e5d34e1f72b0a54ff28a7cc5db Mon Sep 17 00:00:00 2001
+From 8d802a91e630388c23daca54228db355a60ef917 Mon Sep 17 00:00:00 2001
 From: lhofmann <lhofmann@users.noreply.github.com>
 Date: Wed, 23 Dec 2020 18:55:50 +0100
-Subject: [PATCH 4/6] Linux: remove rpaths
+Subject: [PATCH 4/5] Linux: remove rpaths
 
 ---
  CMake/config.cmake | 14 --------------
  1 file changed, 14 deletions(-)
 
 diff --git a/CMake/config.cmake b/CMake/config.cmake
-index 6676a13d2..7df188ad0 100644
+index 53ce8a48d..dac9c6f03 100644
 --- a/CMake/config.cmake
 +++ b/CMake/config.cmake
 @@ -304,17 +304,3 @@ endif()

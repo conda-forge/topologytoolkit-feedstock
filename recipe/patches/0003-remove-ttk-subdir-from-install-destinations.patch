@@ -1,14 +1,14 @@
-From 570bc473659ef068c1e32b0242b4b7f1e460914f Mon Sep 17 00:00:00 2001
+From 3e009690f1e246c4ef85f233e1358961043f7612 Mon Sep 17 00:00:00 2001
 From: lhofmann <lhofmann@users.noreply.github.com>
 Date: Wed, 23 Dec 2020 16:18:30 +0100
-Subject: [PATCH 3/6] remove ttk subdir from install destinations
+Subject: [PATCH 3/5] remove ttk subdir from install destinations
 
 ---
  CMakeLists.txt | 12 ++++++------
  1 file changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 4dbb0b5f3..63b50d431 100644
+index d7997df4d..ad2b5a42e 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -34,11 +34,11 @@ install(
