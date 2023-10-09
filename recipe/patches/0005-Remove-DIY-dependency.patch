@@ -1,19 +1,19 @@
-From b08afdec6e6be2ede127d3b9266c8bd159b70c47 Mon Sep 17 00:00:00 2001
-From: lhofmann <lhofmann@google.com>
+From a1060e12d28e4958510402b46ebd61731a89df40 Mon Sep 17 00:00:00 2001
+From: Lutz Hofmann <lutz.hofmann@iwr.uni-heidelberg.de>
 Date: Thu, 21 Jul 2022 18:23:09 +0200
-Subject: [PATCH 5/6] Remove DIY dependency
+Subject: [PATCH 5/5] Remove DIY dependency
 
 ---
- core/vtk/ttkAlgorithm/vtk.module | 1 -
- 1 file changed, 1 deletion(-)
+ core/vtk/ttkAlgorithm/vtk.module | 2 --
+ 1 file changed, 2 deletions(-)
 
 diff --git a/core/vtk/ttkAlgorithm/vtk.module b/core/vtk/ttkAlgorithm/vtk.module
-index 98813ac72..3aae9eb0d 100644
+index 6b2e7dd35..3aae9eb0d 100644
 --- a/core/vtk/ttkAlgorithm/vtk.module
 +++ b/core/vtk/ttkAlgorithm/vtk.module
-@@ -4,4 +4,3 @@ DEPENDS
+@@ -4,5 +4,3 @@ DEPENDS
    VTK::FiltersCore
  PRIVATE_DEPENDS
    VTK::CommonCore
+-OPTIONAL_DEPENDS
 -  VTK::FiltersParallelDIY2
-\ No newline at end of file

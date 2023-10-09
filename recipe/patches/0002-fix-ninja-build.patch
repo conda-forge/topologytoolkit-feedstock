@@ -1,14 +1,14 @@
-From a692e6a13acd90c8604ed5f088643d39a6382f98 Mon Sep 17 00:00:00 2001
+From ce8b05eea2b822c5f82d154546a999dc20ad72f3 Mon Sep 17 00:00:00 2001
 From: lhofmann <lhofmann@users.noreply.github.com>
 Date: Wed, 23 Dec 2020 15:00:43 +0100
-Subject: [PATCH 2/6] fix ninja build
+Subject: [PATCH 2/5] fix ninja build
 
 ---
  CMake/VTKModule.cmake | 7 -------
  1 file changed, 7 deletions(-)
 
 diff --git a/CMake/VTKModule.cmake b/CMake/VTKModule.cmake
-index ced0364ec..92213e00d 100644
+index ac6b27516..85acd9f05 100644
 --- a/CMake/VTKModule.cmake
 +++ b/CMake/VTKModule.cmake
 @@ -5,13 +5,6 @@ macro(ttk_parse_module_file moduleFile)
