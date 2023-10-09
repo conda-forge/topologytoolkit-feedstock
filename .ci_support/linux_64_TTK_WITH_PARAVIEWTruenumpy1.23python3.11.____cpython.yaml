@@ -1,7 +1,5 @@
 TTK_WITH_PARAVIEW:
 - 'True'
-boost_cpp:
-- 1.78.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -19,23 +17,21 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
-- '9'
+- '10'
 graphviz:
 - '8'
 icu:
-- '70'
+- '73'
 numpy:
 - '1.23'
 pin_run_as_build:
-  boost-cpp:
-    max_pin: x.x.x
   graphviz:
     max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 9.2.0
+- 9.3.0
 python:
 - 3.11.* *_cpython
 sqlite:
@@ -45,7 +41,7 @@ target_platform:
 tbb_devel:
 - '2021'
 vtk:
-- 9.2.5
+- 9.2.6
 zfp:
 - '1.0'
 zip_keys:

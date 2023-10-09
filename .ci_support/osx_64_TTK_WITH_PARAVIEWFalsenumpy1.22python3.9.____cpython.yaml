@@ -2,12 +2,10 @@ MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 TTK_WITH_PARAVIEW:
 - 'False'
-boost_cpp:
-- 1.78.0
 c_compiler:
 - clang
 c_compiler_version:
-- '15'
+- '16'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,27 +13,21 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '15'
-fmt:
-- '9'
+- '16'
 graphviz:
 - '8'
 icu:
-- '70'
+- '73'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.21'
+- '1.22'
 pin_run_as_build:
-  boost-cpp:
-    max_pin: x.x.x
   graphviz:
     max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
-proj:
-- 9.2.0
 python:
 - 3.9.* *_cpython
 sqlite:
@@ -45,7 +37,7 @@ target_platform:
 tbb_devel:
 - '2021'
 vtk:
-- 9.2.5
+- 9.2.6
 zfp:
 - '1.0'
 zip_keys:
