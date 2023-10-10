@@ -111,10 +111,7 @@ requirements:
     - vtk               # [not TTK_WITH_PARAVIEW]
   run:
     - python
-    - graphviz  # [unix]
-    - zfp
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
-    - vtk               # [not TTK_WITH_PARAVIEW]
     - {{ pin_compatible('numpy') }}
 
 test:
