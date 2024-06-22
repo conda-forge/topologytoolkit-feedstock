@@ -1,11 +1,17 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '10.13'
+MACOSX_SDK_VERSION:
+- '10.13'
 TTK_WITH_PARAVIEW:
 - 'False'
 c_compiler:
 - clang
 c_compiler_version:
 - '16'
+c_stdlib:
+- macosx_deployment_target
+c_stdlib_version:
+- '10.13'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -35,7 +41,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 9.3.0
+- 9.3.1
 python:
 - 3.9.* *_cpython
 sqlite:
@@ -45,7 +51,7 @@ target_platform:
 tbb_devel:
 - '2021'
 vtk:
-- 9.2.6
+- 9.3.0
 zfp:
 - '1.0'
 zip_keys:
@@ -54,4 +60,4 @@ zip_keys:
 - - python
   - numpy
 zlib:
-- '1.2'
+- '1'

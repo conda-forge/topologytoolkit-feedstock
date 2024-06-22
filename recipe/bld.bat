@@ -3,7 +3,7 @@ cd build
 
 :: remove Boost version from paraview's cmake config
 if "%TTK_WITH_PARAVIEW%"=="True" (
-perl -i.orig -p0e "s/Boost.*EXACT/Boost/s" "%PREFIX%\Library\lib\cmake\paraview-5.8\vtk\VTK-vtk-module-find-packages.cmake"
+perl -i.orig -p0e "s/Boost.*EXACT/Boost/s" "%PREFIX%\Library\lib\cmake\paraview-5.12\vtk\VTK-vtk-module-find-packages.cmake"
 )
 
 set BUILD_CONFIG=Release
