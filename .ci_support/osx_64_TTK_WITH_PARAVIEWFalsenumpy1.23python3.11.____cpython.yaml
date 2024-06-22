@@ -25,7 +25,7 @@ expat:
 fmt:
 - '10'
 graphviz:
-- '9'
+- '11'
 icu:
 - '73'
 llvm_openmp:
