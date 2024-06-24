@@ -1,37 +1,49 @@
 TTK_WITH_PARAVIEW:
-- 'True'
+- 'False'
 c_compiler:
-- vs2019
+- gcc
+c_compiler_version:
+- '12'
 c_stdlib:
-- vs
+- sysroot
+c_stdlib_version:
+- '2.12'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- gxx
+cxx_compiler_version:
+- '12'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 expat:
 - '2'
 fmt:
 - '10'
+graphviz:
+- '11'
 icu:
 - '73'
 numpy:
-- '1.23'
-perl:
-- 5.32.1
+- '2.0'
 pin_run_as_build:
+  graphviz:
+    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
 proj:
 - 9.3.1
 python:
-- 3.11.* *_cpython
+- 3.9.* *_cpython
 sqlite:
 - '3'
 target_platform:
-- win-64
+- linux-64
 tbb_devel:
 - '2021'
 vtk:
@@ -39,6 +51,10 @@ vtk:
 zfp:
 - '1.0'
 zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+- - c_stdlib_version
+  - cdt_name
 - - python
   - numpy
 zlib:
