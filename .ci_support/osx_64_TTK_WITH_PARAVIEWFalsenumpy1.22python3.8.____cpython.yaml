@@ -27,7 +27,7 @@ fmt:
 graphviz:
 - '11'
 icu:
-- '73'
+- '75'
 llvm_openmp:
 - '16'
 macos_machine:
