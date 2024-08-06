@@ -27,7 +27,7 @@ fmt:
 graphviz:
 - '11'
 icu:
-- '73'
+- '75'
 numpy:
 - '2.0'
 pin_run_as_build:
