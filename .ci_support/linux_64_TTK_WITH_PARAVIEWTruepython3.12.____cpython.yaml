@@ -1,5 +1,5 @@
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 c_compiler:
 - gcc
 c_compiler_version:
@@ -37,9 +37,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.4'
+- '9.5'
 python:
-- 3.11.* *_cpython
+- 3.12.* *_cpython
 sqlite:
 - '3'
 target_platform:

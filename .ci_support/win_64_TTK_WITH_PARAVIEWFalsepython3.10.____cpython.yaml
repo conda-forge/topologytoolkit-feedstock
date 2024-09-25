@@ -1,5 +1,5 @@
 TTK_WITH_PARAVIEW:
-- 'True'
+- 'False'
 c_compiler:
 - vs2019
 c_stdlib:
@@ -19,7 +19,7 @@ icu:
 libboost_headers:
 - '1.86'
 numpy:
-- '1.22'
+- '2.0'
 perl:
 - 5.32.1
 pin_run_as_build:
@@ -27,9 +27,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.4'
+- '9.5'
 python:
-- 3.8.* *_cpython
+- 3.10.* *_cpython
 sqlite:
 - '3'
 target_platform:

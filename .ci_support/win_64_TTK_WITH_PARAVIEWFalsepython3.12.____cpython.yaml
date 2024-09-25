@@ -1,5 +1,5 @@
 TTK_WITH_PARAVIEW:
-- 'True'
+- 'False'
 c_compiler:
 - vs2019
 c_stdlib:
@@ -27,9 +27,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.4'
+- '9.5'
 python:
-- 3.9.* *_cpython
+- 3.12.* *_cpython
 sqlite:
 - '3'
 target_platform:
