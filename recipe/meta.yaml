@@ -144,17 +144,17 @@ about:
     triangulations, in 2D, 3D, or more. It provides a substantial collection
     of generic, efficient and robust implementations of key algorithms in
     topological data analysis. It includes:
-    · For scalar data: critical points, integral lines, persistence diagrams,
+    - For scalar data: critical points, integral lines, persistence diagrams,
 persistence curves, merge trees, contour trees, Reeb graphs, Morse-Smale complexes, topological simplification, topology-aware compression, harmonic design;
-    · For bivariate scalar data: fibers, fiber surfaces, continuous
+    - For bivariate scalar data: fibers, fiber surfaces, continuous
       scatterplots, Jacobi sets, Reeb spaces;
-    · For uncertain scalar data: mandatory critical points;
-    · For ensemble scalar data: Bottleneck and Wasserstein distances between persistence diagrams (exact Munkres-based computation or fast Auction-based approximation), Wasserstein barycenters and clusters of persistence diagrams (fast progressive algorithms) and merge trees, principal geodesic analysis of persistence diagrams and merge trees, distance matrices (Lp norm, Wasserstein distances), contour tree alignment;
-    · For time-varying scalar data: critical point tracking, nested tracking
+    - For uncertain scalar data: mandatory critical points;
+    - For ensemble scalar data: Bottleneck and Wasserstein distances between persistence diagrams (exact Munkres-based computation or fast Auction-based approximation), Wasserstein barycenters and clusters of persistence diagrams (fast progressive algorithms) and merge trees, principal geodesic analysis of persistence diagrams and merge trees, distance matrices (Lp norm, Wasserstein distances), contour tree alignment;
+    - For time-varying scalar data: critical point tracking, nested tracking
       graphs;
-    · For high-dimensional / point cloud data: dimension reduction,
+    - For high-dimensional / point cloud data: dimension reduction,
       persistence-based clustering, persistent cycle extraction;
-    · and more!
+    - and more!
 
 extra:
   recipe-maintainers:
