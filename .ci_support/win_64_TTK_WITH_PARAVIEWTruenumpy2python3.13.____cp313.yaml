@@ -1,0 +1,48 @@
+TTK_WITH_PARAVIEW:
+- 'True'
+c_compiler:
+- vs2019
+c_stdlib:
+- vs
+channel_sources:
+- conda-forge/label/python_rc,conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2019
+expat:
+- '2'
+fmt:
+- '11'
+icu:
+- '75'
+libboost_headers:
+- '1.86'
+numpy:
+- '2'
+perl:
+- 5.32.1
+pin_run_as_build:
+  python:
+    min_pin: x.x
+    max_pin: x.x
+proj:
+- '9.4'
+python:
+- 3.13.* *_cp313
+sqlite:
+- '3'
+target_platform:
+- win-64
+tbb_devel:
+- '2021'
+vtk:
+- 9.3.1
+zfp:
+- '1.0'
+zip_keys:
+- - python
+  - numpy
+  - channel_sources
+zlib:
+- '1'
