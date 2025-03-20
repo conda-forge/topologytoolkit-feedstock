@@ -27,7 +27,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.6'
 python:
 - 3.11.* *_cpython
 sqlite:
@@ -43,6 +43,5 @@ zfp:
 zip_keys:
 - - python
   - numpy
-  - channel_sources
 zlib:
 - '1'
