@@ -5,7 +5,7 @@ c_compiler:
 c_stdlib:
 - vs
 channel_sources:
-- conda-forge/label/python_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -27,7 +27,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.6'
 python:
 - 3.13.* *_cp313
 sqlite:
@@ -43,6 +43,5 @@ zfp:
 zip_keys:
 - - python
   - numpy
-  - channel_sources
 zlib:
 - '1'
