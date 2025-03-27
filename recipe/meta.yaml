@@ -111,6 +111,7 @@ requirements:
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
     - proj              # [TTK_WITH_PARAVIEW]
     - vtk               # [not TTK_WITH_PARAVIEW]
+    - liblzma-devel     # [linux and TTK_WITH_PARAVIEW]
   run:
     - python
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
