@@ -1,5 +1,5 @@
 {% set version = "1.3.0" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
@@ -111,6 +111,7 @@ requirements:
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
     - proj              # [TTK_WITH_PARAVIEW]
     - vtk               # [not TTK_WITH_PARAVIEW]
+    - liblzma-devel     # [linux and TTK_WITH_PARAVIEW]
   run:
     - python
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
