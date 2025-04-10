@@ -31,7 +31,7 @@ cmake .. -G "Ninja" ^
     -DTTK_ENABLE_CPU_OPTIMIZATION=OFF ^
     -DTTK_ENABLE_KAMIKAZE=ON ^
     -DTTK_ENABLE_MPI=OFF ^
-    -DTTK_ENABLE_OPENMP=ON
+    -DTTK_ENABLE_OPENMP=OFF
 if errorlevel 1 exit 1
 
 ninja install
