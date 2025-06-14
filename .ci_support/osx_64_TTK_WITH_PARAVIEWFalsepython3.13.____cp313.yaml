@@ -35,7 +35,7 @@ llvm_openmp:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '2.0'
+- '2'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -43,7 +43,7 @@ pin_run_as_build:
 proj:
 - '9.5'
 python:
-- 3.12.* *_cpython
+- 3.13.* *_cp313
 sqlite:
 - '3'
 target_platform:
@@ -51,13 +51,11 @@ target_platform:
 tbb_devel:
 - '2021'
 vtk:
-- 9.4.1
+- 9.4.2
 zfp:
 - '1.0'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - numpy
 zlib:
 - '1'
