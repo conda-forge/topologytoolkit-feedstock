@@ -23,7 +23,7 @@ cxx_compiler_version:
 expat:
 - '2'
 fmt:
-- '11.1'
+- '11.2'
 graphviz:
 - '13'
 icu:
