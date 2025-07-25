@@ -7,7 +7,7 @@ TTK_WITH_PARAVIEW:
 c_compiler:
 - clang
 c_compiler_version:
-- '18'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -19,11 +19,11 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '18'
+- '19'
 expat:
 - '2'
 fmt:
-- '11.1'
+- '11.2'
 graphviz:
 - '13'
 icu:
@@ -31,7 +31,7 @@ icu:
 libboost_headers:
 - '1.86'
 llvm_openmp:
-- '18'
+- '19'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
