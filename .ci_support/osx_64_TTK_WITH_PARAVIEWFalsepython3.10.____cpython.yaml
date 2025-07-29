@@ -29,7 +29,7 @@ graphviz:
 icu:
 - '75'
 libboost_headers:
-- '1.86'
+- '1.88'
 llvm_openmp:
 - '19'
 macos_machine:
