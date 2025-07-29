@@ -17,7 +17,7 @@ fmt:
 icu:
 - '75'
 libboost_headers:
-- '1.86'
+- '1.88'
 numpy:
 - '2'
 perl:
