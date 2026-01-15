@@ -23,11 +23,11 @@ cxx_compiler_version:
 expat:
 - '2'
 fmt:
-- '11.2'
+- '12.0'
 graphviz:
-- '13'
+- '14'
 icu:
-- '75'
+- '78'
 libboost_headers:
 - '1.88'
 llvm_openmp:
@@ -41,7 +41,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.7'
 python:
 - 3.11.* *_cpython
 sqlite:
@@ -49,9 +49,9 @@ sqlite:
 target_platform:
 - osx-64
 tbb_devel:
-- '2021'
+- '2022'
 vtk:
-- 9.4.2
+- 9.5.1
 zfp:
 - '1.0'
 zip_keys:
