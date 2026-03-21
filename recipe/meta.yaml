@@ -1,5 +1,5 @@
 {% set version = "1.3.0" %}
-{% set build = 8 %}
+{% set build = 9 %}
 
 {% set build = build + 100 %}   # [not TTK_WITH_PARAVIEW]
 
@@ -50,39 +50,6 @@ requirements:
     - {{ stdlib("c") }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - {{ cdt('libxcb') }}  # [linux]
-    - {{ cdt('libxau') }}  # [linux]
-    - {{ cdt('libuuid') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libsm-devel') }}  # [linux]
-    - {{ cdt('libice-devel') }}  # [linux]
-    - {{ cdt('libx11-devel') }}  # [linux]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - {{ cdt('libxrender-devel') }}      # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('mesa-libegl-devel') }}     # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('alsa-lib-devel') }}        # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('gtk2-devel') }}            # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('gtkmm24-devel') }}         # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libdrm-devel') }}          # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxcomposite-devel') }}   # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxcursor-devel') }}      # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxi-devel') }}           # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxrandr-devel') }}       # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('pciutils-devel') }}        # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxscrnsaver-devel') }}   # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxtst-devel') }}         # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxdamage-devel') }}      # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxfixes-devel') }}       # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxrandr') }}             # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('alsa-lib') }}              # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('xorg-x11-server-xvfb') }}  # [linux and TTK_WITH_PARAVIEW]
-    - {{ cdt('libxt-devel') }}           # [linux and TTK_WITH_PARAVIEW]
     - cmake
     - make      # [unix]
     - ninja     # [win]
@@ -112,6 +79,25 @@ requirements:
     - proj              # [TTK_WITH_PARAVIEW]
     - vtk               # [not TTK_WITH_PARAVIEW]
     - liblzma-devel     # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libsm                # [linux]
+    - xorg-libice                # [linux]
+    - xorg-libx11                # [linux]
+    - libgl-devel                    # [linux]
+    - xorg-xorgproto                     # [linux]
+    - xorg-libxrender                    # [linux and TTK_WITH_PARAVIEW]
+    - libegl-devel                       # [linux and TTK_WITH_PARAVIEW]
+    - alsa-lib                           # [linux and TTK_WITH_PARAVIEW]
+    - gtk2                               # [linux and TTK_WITH_PARAVIEW]
+    - libdrm                             # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxcomposite                 # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxcursor                    # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxi                         # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxrandr                     # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxscrnsaver                 # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxtst                       # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxdamage                    # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxfixes                     # [linux and TTK_WITH_PARAVIEW]
+    - xorg-libxt                         # [linux and TTK_WITH_PARAVIEW]
   run:
     - python
     - paraview * *_qt   # [TTK_WITH_PARAVIEW]
@@ -138,8 +124,7 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: >
-    The Topology ToolKit (TTK) is an open-source library and software
-    collection for topological data analysis and visualization. 
+    The Topology ToolKit (TTK) is an open-source library and software collection for topological data analysis and visualization. 
   description: |
     TTK can handle scalar data defined either on regular grids or
     triangulations, in 2D, 3D, or more. It provides a substantial collection
