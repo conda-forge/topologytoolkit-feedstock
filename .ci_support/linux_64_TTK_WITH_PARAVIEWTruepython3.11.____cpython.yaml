@@ -1,5 +1,7 @@
 TTK_WITH_PARAVIEW:
 - 'True'
+alsa_lib:
+- '1.2'
 c_compiler:
 - gcc
 c_compiler_version:
@@ -8,8 +10,6 @@ c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -23,9 +23,9 @@ docker_image:
 expat:
 - '2'
 fmt:
-- '11.2'
+- '12.0'
 graphviz:
-- '13'
+- '14'
 icu:
 - '75'
 libboost_headers:
@@ -39,7 +39,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.7'
 python:
 - 3.11.* *_cpython
 sqlite:
@@ -47,9 +47,9 @@ sqlite:
 target_platform:
 - linux-64
 tbb_devel:
-- '2021'
+- '2022'
 vtk:
-- 9.4.2
+- 9.6.0
 zfp:
 - '1.0'
 zip_keys:
