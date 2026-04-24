@@ -13,9 +13,9 @@ cxx_compiler:
 expat:
 - '2'
 fmt:
-- '11.2'
+- '12.0'
 icu:
-- '75'
+- '78'
 libboost_headers:
 - '1.88'
 numpy:
@@ -27,7 +27,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.7'
 python:
 - 3.13.* *_cp313
 sqlite:
@@ -35,9 +35,9 @@ sqlite:
 target_platform:
 - win-64
 tbb_devel:
-- '2021'
+- '2022'
 vtk:
-- 9.4.2
+- 9.5.1
 zfp:
 - '1.0'
 zlib:
