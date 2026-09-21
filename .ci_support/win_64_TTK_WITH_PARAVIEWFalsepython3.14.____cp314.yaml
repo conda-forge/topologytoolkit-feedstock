@@ -1,5 +1,5 @@
 TTK_WITH_PARAVIEW:
-- 'True'
+- 'False'
 c_compiler:
 - vs2022
 c_stdlib:
@@ -13,9 +13,9 @@ cxx_compiler:
 expat:
 - '2'
 fmt:
-- '11.2'
+- '12.1'
 icu:
-- '75'
+- '78'
 libboost_headers:
 - '1.88'
 numpy:
@@ -27,17 +27,17 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.9'
 python:
-- 3.9.* *_cpython
+- 3.14.* *_cp314
 sqlite:
 - '3'
 target_platform:
 - win-64
 tbb_devel:
-- '2021'
+- '2023'
 vtk:
-- 9.4.2
+- 9.6.2
 zfp:
 - '1.0'
 zlib:
