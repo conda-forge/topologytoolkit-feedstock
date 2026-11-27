@@ -1,59 +1,48 @@
 TTK_WITH_PARAVIEW:
-- 'False'
+- 'True'
 c_compiler:
-- gcc
+- vs
 c_compiler_version:
-- '14'
+- '2022'
 c_stdlib:
-- sysroot
-c_stdlib_version:
-- '2.17'
-cdt_name:
-- conda
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
+- vs
 cxx_compiler_version:
-- '14'
-docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma9
+- '2022'
 expat:
 - '2'
 fmt:
-- '11.2'
-graphviz:
-- '13'
+- '12.1'
 icu:
-- '75'
+- '78'
 libboost_headers:
 - '1.88'
-liblzma_devel:
-- '5'
 numpy:
 - '2'
+perl:
+- 5.32.1
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.9'
 python:
-- 3.9.* *_cpython
+- 3.14.* *_cp314
 sqlite:
 - '3'
 target_platform:
-- linux-64
+- win-64
 tbb_devel:
-- '2021'
+- '2023'
 vtk:
-- 9.4.2
+- 9.7.2
 zfp:
 - '1.0'
-zip_keys:
-- - c_compiler_version
-  - cxx_compiler_version
 zlib:
 - '1'

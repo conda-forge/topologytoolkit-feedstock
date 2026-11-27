@@ -1,7 +1,9 @@
 TTK_WITH_PARAVIEW:
 - 'True'
 c_compiler:
-- vs2022
+- vs
+c_compiler_version:
+- '2022'
 c_stdlib:
 - vs
 channel_sources:
@@ -9,13 +11,15 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 expat:
 - '2'
 fmt:
-- '11.2'
+- '12.1'
 icu:
-- '75'
+- '78'
 libboost_headers:
 - '1.88'
 numpy:
@@ -27,7 +31,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.5'
+- '9.9'
 python:
 - 3.13.* *_cp313
 sqlite:
@@ -35,9 +39,9 @@ sqlite:
 target_platform:
 - win-64
 tbb_devel:
-- '2021'
+- '2023'
 vtk:
-- 9.4.2
+- 9.7.2
 zfp:
 - '1.0'
 zlib:
